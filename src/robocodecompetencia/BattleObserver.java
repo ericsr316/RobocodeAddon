@@ -45,16 +45,14 @@ public class BattleObserver extends BattleAdaptor {
         int espacio = nombre.indexOf(" ");
         
         ganadores.add(nombre.substring(0, espacio));
-        listaPresentar.add(nombre.substring(0, espacio).concat(" "+puntuacion+" puntos"));
-        //ganadores.get(c).concat(" "+puntuacion);
-//ganadores.add(nombre);
+        listaPresentar.add(nombre.substring(7, espacio).concat(" "+puntuacion+" puntos"));
         c++;
       }
     }    
         WinnersDialog winners = new WinnersDialog(listaPresentar,null,false);
         winners.setVisible(true);
       try {
-          Thread.sleep(60000);
+          Thread.sleep(64000);
       } catch (InterruptedException ex) {
           Logger.getLogger(BattleObserver.class.getName()).log(Level.SEVERE, null, ex);
       }
